@@ -1,0 +1,22 @@
+{
+  "name": "react-auth-server",
+  "version": "1.0.0",
+  "description": "API Server for a Points System.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "sdmichelini",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
+    "express-static": "^1.0.3",
+    "jsonwebtoken": "^7.1.9",
+    "mongodb": "^2.2.11"
+  }
+}
