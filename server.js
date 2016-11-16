@@ -37,7 +37,8 @@ let events_collection;
 var totals = {};
 
 const ALLOWED_CLIENTS = [
-  'auth0|5813aac8f1413bed0950e515'
+  'auth0|5813aac8f1413bed0950e515',
+  'auth0|582b89e18724638206744c82'
 ];
 
 function checkAdmin(req, res, next) {
@@ -289,7 +290,7 @@ app.get('/api/auth', authCheck, checkAdmin, (req, res) => {
   res.json({message:"Token",token:process.env.AUTH0_TOKEN});
 });
 
-MongoClient.connect(process.env.MONGODB_URI, (err, database) => {
+MongoClient.connect(process.env.MONGO_URL, (err, database) => {
   if(err) return console.log(err);
   db = database;
   points_collection = db.collection('points');
