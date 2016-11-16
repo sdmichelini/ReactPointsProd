@@ -14,10 +14,13 @@ const ObjectId = require('mongodb').ObjectID;
 let port = process.env.PORT || 3001;
 
 const path = require('path');
+
+app.use(cors());
+
 app.use('/assets', express.static(path.join(__dirname, 'dist/assets')));
 app.use('/', express.static(path.join(__dirname, 'dist')));
 
-app.use(cors());
+
 
 // create application/json parser
 const jsonParser = bodyParser.json();
